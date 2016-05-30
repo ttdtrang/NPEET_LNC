@@ -21,7 +21,7 @@ for i in range(N):
 	y.append(x[i]+nr.rand(1)[0]*noise);
 	y_for_ent.append([y[-1]]);
 
-usedN = 500; #number of samples used for calculation
+usedN = 100; #number of samples used for calculation
 print 'Testing 2D linear relationship Y=X+Uniform_Noise'
 print 'noise level=' + str(noise) + ", Nsamples = " + str(usedN);
 print 'True MI(x:y)', MI.entropy(y_for_ent[:1000],k=1,base=np.exp(1),intens=0.0)-log(noise);
@@ -40,7 +40,7 @@ for i in range(N):
 	y.append(x[i]*x[i]+nr.rand(1)[0]*noise);
 	y_for_ent.append([y[-1]]);
 
-usedN = 1000; #number of samples used for calculation
+usedN = 100; #number of samples used for calculation
 print 'Testing 2D quadratic relationship Y=X^2+Uniform_Noise'
 print 'noise level=' + str(noise) + ", Nsamples = " + str(usedN);
 print 'True MI(x:y)', MI.entropy(y_for_ent[:1000],k=1,base=np.exp(1),intens=0.0)-log(noise);
